@@ -16,11 +16,11 @@ from linebot.v3.messaging import (
 from linebot.v3.webhooks import (
     MessageEvent,
     TextMessageContent
-) 
-\
+)
+
 app = Flask(__name__)
 
-configuration = Configuration(access_token='v29MnbXAn8JinfvgCOQjCnnqGuaa03p4hz/59buVaGzW1u7j1bRh118TG3sNhU3ABhNkA3tNa/GCa9+4oMHy4sxKQsaYNCCHXacHFnRvgGfOfvuwDpZ+k29/Mjqxeise4+O3kchbHzZJoyoECQxBRAdB04t89/1O/w1cDnyilFU=')
+configuration = Configuration(access_token='jtzDIgiW6V74emUv/awm8R7GLG6UR1c770Kc46YmMIJjzhhnF88+cg3+yBhPO4xpBhNkA3tNa/GCa9+4oMHy4sxKQsaYNCCHXacHFnRvgGf2vCDg8Tedj78BRqeljrCOlCFu034RyqqCh0OjOsPCxwdB04t89/1O/w1cDnyilFU=')
 handler = WebhookHandler('f3c72fcc60b3f0c9b112ededdd56a69b')
 
 
@@ -55,4 +55,9 @@ def handle_message(event):
         )
 
 if __name__ == "__main__":
-    app.run()
+    app.run(host="0.0.0.0", port=5001, debug=True)
+
+
+
+# pkill -f flask
+# flask run --host=0.0.0.0 --port=5001
