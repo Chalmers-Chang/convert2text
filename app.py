@@ -1,5 +1,6 @@
 from flask import Flask, request, abort
 
+
 from linebot.v3 import (
     WebhookHandler
 )
@@ -59,5 +60,3 @@ if __name__ == "__main__":
 
 
 
-# pkill -f flask
-# flask run --host=0.0.0.0 --port=5001
